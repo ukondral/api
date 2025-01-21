@@ -1,0 +1,317 @@
+{
+	"id": "6a1ec4b0-217b-4cfc-af10-34761a4910d9",
+	"name": "DemoShopping",
+	"timestamp": "2025-01-21T01:56:33.339Z",
+	"collection_id": "41200396-75d247ca-ce09-49a4-98a6-9a0f408148c7",
+	"folder_id": 0,
+	"environment_id": "41200396-f403c2f7-b4f3-4c27-8a3e-955861dfb2c0",
+	"totalPass": 19,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-01-21T01:56:30.830Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "0b6d27bc-9694-4820-a9ab-931eda14d13f",
+			"name": "Возвращает список всех продуктов",
+			"url": "/products",
+			"time": 788,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"The array is not empty": true,
+				"Response time is less than 1500ms": true,
+				"Response is in JSON format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The array is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is in JSON format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				788
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"The array is not empty": true,
+					"Response time is less than 1500ms": true,
+					"Response is in JSON format": true
+				}
+			]
+		},
+		{
+			"id": "8929a91d-f98a-412f-8c8c-11acab720e5a",
+			"name": "Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Product price is greater than 0": true,
+				"FreeShipping accepts valid boolean values": true,
+				"String fields do not exceed maximum length": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Product price is greater than 0": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FreeShipping accepts valid boolean values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"String fields do not exceed maximum length": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				143
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Product price is greater than 0": true,
+					"FreeShipping accepts valid boolean values": true,
+					"String fields do not exceed maximum length": true
+				}
+			]
+		},
+		{
+			"id": "f0756098-1001-4ac2-875e-8e7f8ab8dace",
+			"name": "Поиск товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/41",
+			"time": 107,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Product ID matches requested value": true,
+				"Field types are correct": true,
+				"Image URL is valid": true,
+				"FreeShipping has a valid value": true
+			},
+			"testPassFailCounts": {
+				"Product ID matches requested value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Field types are correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Image URL is valid": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FreeShipping has a valid value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				107
+			],
+			"allTests": [
+				{
+					"Product ID matches requested value": true,
+					"Field types are correct": true,
+					"Image URL is valid": true,
+					"FreeShipping has a valid value": true
+				}
+			]
+		},
+		{
+			"id": "bf882956-f9ef-44de-afc2-b5cdb3cd9947",
+			"name": "Удаление товара по ID и tests",
+			"url": "https://qa.demoshopping.ru/products/id/70",
+			"time": 103,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404 for non-existent product": true,
+				"Response time is less than 600ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404 for non-existent product": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 600ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				103
+			],
+			"allTests": [
+				{
+					"Status code is 404 for non-existent product": true,
+					"Response time is less than 600ms": true
+				}
+			]
+		},
+		{
+			"id": "b639bad8-fce3-4d45-8c6f-32c79b5cff4a",
+			"name": "Удаление товара по ID и test",
+			"url": "https://qa.demoshopping.ru/products/id/19837",
+			"time": 115,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 - Product successfully deleted": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200 - Product successfully deleted": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				115
+			],
+			"allTests": [
+				{
+					"Status code is 200 - Product successfully deleted": false
+				}
+			]
+		},
+		{
+			"id": "c5953a31-855a-491f-9bba-e715f03da64f",
+			"name": "Полное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/19838",
+			"time": 124,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"FreeShipping accepts valid boolean values": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"FreeShipping accepts valid boolean values": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				124
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"FreeShipping accepts valid boolean values": true
+				}
+			]
+		},
+		{
+			"id": "841dc1b0-cf0b-428b-b03b-e0788e752a3b",
+			"name": "Частичное обновление товара для change_product_id",
+			"url": "https://qa.demoshopping.ru/products/id/19838",
+			"time": 119,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				119
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1499,
+	"collection": {
+		"requests": [
+			{
+				"id": "0b6d27bc-9694-4820-a9ab-931eda14d13f",
+				"method": "GET"
+			},
+			{
+				"id": "8929a91d-f98a-412f-8c8c-11acab720e5a",
+				"method": "POST"
+			},
+			{
+				"id": "f0756098-1001-4ac2-875e-8e7f8ab8dace",
+				"method": "GET"
+			},
+			{
+				"id": "bf882956-f9ef-44de-afc2-b5cdb3cd9947",
+				"method": "DELETE"
+			},
+			{
+				"id": "b639bad8-fce3-4d45-8c6f-32c79b5cff4a",
+				"method": "DELETE"
+			},
+			{
+				"id": "c5953a31-855a-491f-9bba-e715f03da64f",
+				"method": "PUT"
+			},
+			{
+				"id": "841dc1b0-cf0b-428b-b03b-e0788e752a3b",
+				"method": "PATCH"
+			}
+		]
+	}
+}
